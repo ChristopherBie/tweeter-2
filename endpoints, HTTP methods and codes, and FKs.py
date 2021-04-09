@@ -1,61 +1,35 @@
 endpoints and HTTP methods and codes
 ====================================
-# users
-#     # POST 201 # ok
-#     # GET 200 ok
-#     PATCH 200 #
-#     DELETE 204 #
-# login
-#     POST 201 # ok
-#     # GET
-#     # PATCH
-#     DELETE 204 # ok
-# follows
-#     # POST 204 # ok
-#     # GET 200 ok
-#     # PATCH
-#     DELETE 204 #
-# followers
-    #POST
-    # GET 200 ok
-    #PATCH
-    #DELETE
-tweets
-    # POST 201 # ok
-    # GET 200 ok
-    PATCH 200
+users
+    POST 201 # ok
+    GET 200 # ok
+    PATCH 200 # ok
+    DELETE 204 # ok
+login
+    POST 201 # ok
+    # GET
+    # PATCH
+    DELETE 204 # ok
+tasks
+    POST 201 # ok
+    GET 200 # ok
+    PATCH 200 # ok
     DELETE 204 #
-# tweet-likes
-#     # POST 201 # ok
-#     GET 200 #
-#     #PATCH
-#     DELETE 204 #
-# comments
-#     # POST 201 # ok
-#     GET 200 #
-#     PATCH 200 #
-#     DELETE 204 #
-# comment-likes
-#     # POST 201 # ok
-#     GET 200 #
-#     #PATCH
-#     DELETE 204 #
 
 
+Foreign keys
+============
+id (in the users table)
+–id in user_sessions
+–userId in one_time_tasks
 
-FKs
-===
-userId (users)
-–user_sessions
--follows (followers & followed)
-–tweets
--t-likes
--comments
--c-likes
+# -t-likes
+# -comments
+# -c-likes
 
-tweetId (tweets)
--t-likes
--comments
+# tweetId (tweets)
+# -t-likes
+# -comments
 
-commentId (comments)
--c-likes
+# commentId (comments)
+# -c-likes
